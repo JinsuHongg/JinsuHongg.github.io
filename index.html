@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+<head>
+	<title>Jinsu Hong</title>
+</head>
+
+<body>
+	<div class = 'top_cotainer'>
+		<div class="title">
+			<h1>Jinsu Hong</h1>
+		</div>
+		<div class="navi">
+			<nav>
+				<ul>
+					<li><a href="index.html"><b>Home</b></a></li>
+					<li><a href="publication.html">Publications</a></li>
+					<li><a href="research.html">Research</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<hr style="width:75%; margin-left: 250px; height:1px; background: gray; border:none;">
+	<!-- -----------------------------------top header---------------------------------- -->
+
+	<div class="body_cotainer">
+		<div class="photo">
+			<img src="images/Savanah_Jinsu.png" alt="gmail icon" style="width:255.6px;height:219.6px; display: block; margin-left: auto; margin-right: auto; margin-top:27px; border-radius: 20px;">
+			
+			<a href="mailto:jinsuhong.knight@gmail.com"><img src="images/gmail.png" alt="gmail icon" style="width:20px;height:20px;padding-left:70px; margin-top: 10px;"></a>&nbsp e-mail<br>
+			<a href="https://linkedin.com/in/jinsuhong"><img src="images/linkedin.png" alt="linkedin icon" style="width:20px;height:20px;padding-left:70px;"></a>&nbsp Linkedin<br>
+			<a href="https://orcid.org/0009-0002-4383-1376"><img src="images/orcid.png" alt="orcid icon" style="width:20px;height:20px;padding-left:70px;"></a>&nbsp ORCiD<br>
+			<a href="https://scholar.google.com/citations?user=_sb6QZMAAAAJ&hl=en&oi=ao"><img src="images/google-scholar.png" alt="google scholar icon" style="width:20px;height:20px;padding-left:70px;"></a>&nbsp Google Scholar
+		</div>
+
+		<div class="intro">
+			My name is Jinsu Hong, and I'm a Ph.D. student at Georgia State University under the supervision of Dr. Berkay Aydin. 
+			My research focuses on Data Science applications in Space Weather, specifically machine learning for solar event forecasting, 
+			image processing for object detection, and data integration. I'm passionate about understanding the complexities of space weather 
+			and its impact on our planet.
+		</div>
+
+	</div>
+
+
+
+</body>
+
+
+<style>
+	body{
+		font-family: 'Lora';
+	}
+	ul {
+		list-style-type: none;
+		align-content: right;
+		padding-top: 5pt;
+		/* padding-left: 200pt; */
+		/* margin: 0; */
+		/* padding: 0; */
+		/* overflow: hidden; */
+		/* background-color: transparent; */
+		/* background-color: #333333; */
+	}
+
+	li {
+		float: left;
+		padding: 15px;
+	}
+
+	li a {
+		display: block;
+		color: black;
+		/* text-align: right; */
+		/* padding: 15px; */
+		text-decoration: none;
+	}
+
+	.top_cotainer{
+		display: grid;
+		grid-template-columns: [first] 350px [time] 250px [body_start] auto [body_end] 250px [etc] 250px [end];
+  		/* grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
+		/* border: 3px solid green; */
+	}
+	.title{
+		grid-column-start: time;
+		grid-column-end: span body_start;
+		/* border: 3px solid green; */
+	}
+
+	.navi{
+		grid-column-start: body_end;
+		grid-column-end: span end;
+		display: flex;
+		align-items: flex-end;
+	}
+	/* -------------------------------------------------------------------------------------------------------------- */
+
+
+	.body_cotainer{
+		display: grid;
+		grid-template-columns: [first] 20% [body_start] auto [middle_left] 5% [middle_right] 600px [body_end] 15% [end];
+	}
+
+	.photo{
+		grid-column-start: body_start;
+		grid-column-end: middle_left;
+		/* border: 3px solid green; */
+	}
+
+	.intro{
+		grid-column-start: middle_right;
+		grid-column-end: body_end;
+		margin-top: 30px;
+		text-align: justify;
+		font-size:20px;
+		line-height: 1.5;
+		/* border: 3px solid green; */
+	}
+
+</style>
+</html>
