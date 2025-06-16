@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+<head>
+	<title>Jinsu Hong</title>
+</head>
+
+<body>
+	<div class = 'top_cotainer'>
+		<div class="title">
+			<h1>Jinsu Hong</h1>
+		</div>
+		<div class="navi">
+			<nav>
+				<ul>
+					<li><a href="https://jinsuhongg.github.io/">Home</a></li>
+					<li><a href="https://jinsuhongg.github.io/publications/"><b>Publications</b></a></li>
+					<li><a href="https://jinsuhongg.github.io/research/">Research</a></li>
+					<li><a href="https://jinsuhongg.github.io/data-resource-map/">Resource map</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<hr style="width:75%; margin-left: 250px; height:1px; background: gray; border:none;">
+	<!-- -----------------------------------top header---------------------------------- -->
+	
+	<div class="publication">
+		<div class="detail">
+			<h2>Publications</h2>
+		</div>
+	</div>
+	
+	<div class="publication">
+		<div class="year">
+			Dec.2023
+		</div>
+		<div class="detail">
+			J. Hong, C. Pandey, A. Ji, and B. Aydin, <b>An Innovative Solar Flare Metadata Collection for Space Weather Analytics</b>. 
+			In: 22nd International Conference on Machine Learning and Applications (ICMLA), 2023.
+		</div>
+		<div class="detail">
+			<a href="https://www.researchgate.net/profile/Jinsu-Hong-2/publication/378127998_An_Innovative_Solar_Flare_Metadata_Collection_for_Space_Weather_Analytics/links/65c83e7479007454976fbab4/An-Innovative-Solar-Flare-Metadata-Collection-for-Space-Weather-Analytics.pdf" style="color:blue; text-decoration: none;"><img src="images/pdf.png" alt="pdf icon" style="width:20px;height:20px; vertical-align: text-bottom;"> PDF</a>
+		</div>
+	</div>
+	
+	<div class="spacer"></div>
+
+	<div class="publication">
+		<div class="year">
+			Aug.2023
+		</div>
+		<div class="detail">
+			J. Hong, A. Ji, C. Pandey, and B. Aydin, "<b>Enhancing Solar Flare Prediction with Innovative Data-Driven Labels</b>,” 
+			presented at the 2023 IEEE 5th International Conference on Cognitive Machine Intelligence (CogMI).
+		</div>
+		<div class="detail">
+			<a href="https://www.computer.org/csdl/proceedings-article/cogmi/2023/238300a190/1UGSCFdn3Hi" style="color:blue; text-decoration: none;"><img src="images/pdf.png" alt="pdf icon" style="width:20px;height:20px; vertical-align: text-bottom;"> PDF</a>
+		</div>
+	</div>
+
+	<div class="spacer"></div>
+
+	<div class="publication">
+		<div class="year">
+			June.2023
+		</div>
+		<div class="detail">
+			J. Hong, A. Ji, C. Pandey, and B. Aydin, “<b>Beyond Traditional Flare Forecasting: A Data-driven Labeling Approach for High-fidelity Predictions</b>,” 
+			in Big Data Analytics and Knowledge Discovery.
+		</div>
+		<div class="detail">
+			<a href="https://par.nsf.gov/servlets/purl/10435332" style="color:blue; text-decoration: none;"><img src="images/pdf.png" alt="pdf icon" style="width:20px;height:20px; vertical-align: text-bottom;"> PDF</a>
+		</div>
+	</div>
+
+
+</body>
+
+
+<style>
+	body{
+		font-family: 'Lora';
+	}
+	ul {
+		list-style-type: none;
+		align-content: right;
+		padding-top: 5pt;
+		/* padding-left: 200pt; */
+		/* margin: 0; */
+		/* padding: 0; */
+		/* overflow: hidden; */
+		/* background-color: transparent; */
+		/* background-color: #333333; */
+	}
+
+	li {
+		float: left;
+		padding: 15px;
+	}
+
+	li a {
+		display: block;
+		color: black;
+		/* text-align: right; */
+		/* padding: 15px; */
+		text-decoration: none;
+	}
+
+	.top_cotainer{
+		display: grid;
+		grid-template-columns: [first] 350px [time] 250px [body_start] auto [body_end] 400px [etc] 250px [end];
+  		/* grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
+		/* border: 3px solid green; */
+	}
+	.title{
+		grid-column-start: time;
+		grid-column-end: span body_start;
+		/* border: 3px solid green; */
+	}
+
+	.navi{
+		grid-column-start: body_end;
+		grid-column-end: span end;
+		display: flex;
+		align-items: flex-end;
+	}
+	/* -------------------------------------------------------------------------------------------------------------- */
+	
+	.publication{
+		display: grid;
+		grid-template-columns: [first] 15% [body_start] 250px [middle_left] 3% [middle_right] 600px [body_end] 15% [end];
+	}
+	.year{
+		grid-column-start: body_start;
+		grid-column-end: middle_left;
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		/* justify-content: center; */
+		/* border: 3px solid green; */
+	}
+	.detail{
+		grid-column-start: middle_right;
+		grid-column-end: body_end;
+		text-align: justify;
+		/* border: 3px solid green; */
+	}
+	.spacer{
+		margin-top: 25px;
+	}
+
+</style>
+</html>

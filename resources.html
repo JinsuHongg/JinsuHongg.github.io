@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+<head>
+	<title>Jinsu Hong</title>
+</head>
+
+<body>
+	<div class = 'top_cotainer'>
+		<div class="title">
+			<h1>Jinsu Hong</h1>
+		</div>
+		<div class="navi">
+			<nav>
+				<ul>
+					<li><a href="https://jinsuhongg.github.io/">Home</a></li>
+					<li><a href="https://jinsuhongg.github.io/publications/">Publications</a></li>
+					<li><a href="https://jinsuhongg.github.io/research/">Research</a></li>
+					<li><a href="https://jinsuhongg.github.io/data-resource-map/"><b>Resource map</b></a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<hr style="width:75%; margin-left: 250px; height:1px; background: gray; border:none;">
+	<!-- -----------------------------------top header---------------------------------- -->
+
+	
+	<div class ="body_cotainer">
+		<div class = "main_contents">
+			<h1>Data resource map</h1>
+			
+			<ol>
+				<h2>0. General</h2>
+				<ol>
+					<a href="https://www.spaceweatherlive.com/en.html" target="_blank" rel="noopener noreferrer">a. SpaceWeatherLive.com</a>
+				</ol>
+			</ol>
+
+			<ol>
+				<h2>1. Solar flares</h2>
+				<ol>
+					<a href="https://xrt.cfa.harvard.edu/flare_catalog/" target="_blank" rel="noopener noreferrer">a. Hinode flare catalog</a><br><br>
+					<a href="https://www.ngdc.noaa.gov/stp/satellite/goes-r.html" target="_blank" rel="noopener noreferrer">b. GOES flare catalog</a><br><br>
+					<a href="https://www.lmsal.com/solarsoft/latest_events_archive.html" target="_blank" rel="noopener noreferrer">c. SSW latest event</a><br><br>
+					<a href="https://www.ngdc.noaa.gov/stp/satellite/goes/doc/GOES_XRS_readme.pdf" target="_blank" rel="noopener noreferrer">d. GOES1-15 Readme (scaling factor)</a>
+				</ol>
+			</ol>
+			
+			
+			
+			
+		</div>
+	</div>
+
+</body>
+
+
+<style>
+	body{
+		font-family: 'Lora';
+	}
+	ul {
+		list-style-type: none;
+		align-content: right;
+		padding-top: 5pt;
+		/* padding-left: 200pt; */
+		/* margin: 0; */
+		/* padding: 0; */
+		/* overflow: hidden; */
+		/* background-color: transparent; */
+		/* background-color: #333333; */
+	}
+
+	li {
+		float: left;
+		padding: 15px;
+	}
+
+	li a {
+		display: block;
+		color: black;
+		/* text-align: right; */
+		/* padding: 15px; */
+		text-decoration: none;
+	}
+
+	.top_cotainer{
+		display: grid;
+		grid-template-columns: [first] 350px [time] 250px [body_start] auto [body_end] 400px [etc] 250px [end];
+  		/* grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
+		/* border: 3px solid green; */
+	}
+	.title{
+		grid-column-start: time;
+		grid-column-end: span body_start;
+		/* border: 3px solid green; */
+	}
+
+	.navi{
+		grid-column-start: body_end;
+		grid-column-end: span end;
+		display: flex;
+		align-items: flex-end;
+	}
+	/* -------------------------------------------------------------------------------------------------------------- */
+
+
+	.body_cotainer{
+		display: grid;
+		grid-template-columns: [first] 25% [body_start] auto [middle_left] 25% [end];
+	}
+
+	.main_contents{
+		grid-column-start: body_start;
+		grid-column-end: middle_left;
+		/* border: 3px solid green; */
+	}
+
+</style>
+</html>
