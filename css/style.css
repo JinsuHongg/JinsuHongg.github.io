@@ -36,15 +36,15 @@ a:hover {
 header.top_container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   background-color: #fff;
-  padding: 0 20px;
+  padding: 0 20px 0 40px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-  gap: 40px;
+  gap: 60px;
 }
 
 header .title h1 {
