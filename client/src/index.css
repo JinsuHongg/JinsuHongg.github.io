@@ -1,7 +1,7 @@
 /*
-Design philosophy for this file: Atmospheric scientific minimalism.
-The palette should feel nocturnal, observatory-inspired, and editorial.
-Use luminous cyan accents, deep space neutrals, layered glass surfaces, and serif-led hierarchy.
+Design philosophy for this file: Clean, minimal white aesthetic.
+Light, airy, and professional. Use soft grays, subtle accents, and clean typography.
+Focus on readability and simplicity over visual drama.
 */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -9,8 +9,8 @@ Use luminous cyan accents, deep space neutrals, layered glass surfaces, and seri
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Cormorant Garamond", serif;
-  --font-sans: "Manrope", sans-serif;
+  --font-display: "Merriweather", serif;
+  --font-sans: "Inter", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -50,99 +50,83 @@ Use luminous cyan accents, deep space neutrals, layered glass surfaces, and seri
 }
 
 :root {
-  --radius: 1.4rem;
-  --background: oklch(0.14 0.025 257);
-  --foreground: oklch(0.93 0.018 230);
-  --card: oklch(0.18 0.024 255);
-  --card-foreground: oklch(0.94 0.018 230);
-  --popover: oklch(0.18 0.024 255);
-  --popover-foreground: oklch(0.94 0.018 230);
-  --primary: oklch(0.81 0.103 206);
-  --primary-foreground: oklch(0.16 0.02 255);
-  --secondary: oklch(0.24 0.022 255);
-  --secondary-foreground: oklch(0.92 0.015 230);
-  --muted: oklch(0.22 0.019 255);
-  --muted-foreground: oklch(0.73 0.018 235);
-  --accent: oklch(0.27 0.03 245);
-  --accent-foreground: oklch(0.94 0.018 230);
-  --destructive: oklch(0.67 0.18 25);
+  --radius: 0.75rem;
+  --background: oklch(0.98 0.001 0);
+  --foreground: oklch(0.25 0.01 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.01 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.01 0);
+  --primary: oklch(0.35 0.15 260);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.92 0.01 0);
+  --secondary-foreground: oklch(0.3 0.01 0);
+  --muted: oklch(0.88 0.005 0);
+  --muted-foreground: oklch(0.55 0.01 0);
+  --accent: oklch(0.4 0.12 260);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.65 0.2 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.8 0.11 206 / 0.45);
-  --chart-1: oklch(0.81 0.103 206);
-  --chart-2: oklch(0.74 0.082 230);
-  --chart-3: oklch(0.68 0.14 45);
-  --chart-4: oklch(0.76 0.07 168);
-  --chart-5: oklch(0.7 0.07 285);
-  --sidebar: oklch(0.17 0.022 255);
-  --sidebar-foreground: oklch(0.94 0.018 230);
-  --sidebar-primary: oklch(0.81 0.103 206);
-  --sidebar-primary-foreground: oklch(0.16 0.02 255);
-  --sidebar-accent: oklch(0.24 0.022 255);
-  --sidebar-accent-foreground: oklch(0.94 0.018 230);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.8 0.11 206 / 0.45);
+  --border: oklch(0.9 0.005 0);
+  --input: oklch(0.95 0.002 0);
+  --ring: oklch(0.35 0.15 260 / 0.4);
+  --chart-1: oklch(0.35 0.15 260);
+  --chart-2: oklch(0.5 0.12 200);
+  --chart-3: oklch(0.45 0.14 280);
+  --chart-4: oklch(0.4 0.13 240);
+  --chart-5: oklch(0.55 0.11 320);
+  --sidebar: oklch(0.98 0.001 0);
+  --sidebar-foreground: oklch(0.25 0.01 0);
+  --sidebar-primary: oklch(0.35 0.15 260);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.92 0.01 0);
+  --sidebar-accent-foreground: oklch(0.3 0.01 0);
+  --sidebar-border: oklch(0.9 0.005 0);
+  --sidebar-ring: oklch(0.35 0.15 260 / 0.4);
 }
 
 .dark {
-  --background: oklch(0.14 0.025 257);
-  --foreground: oklch(0.93 0.018 230);
-  --card: oklch(0.18 0.024 255);
-  --card-foreground: oklch(0.94 0.018 230);
-  --popover: oklch(0.18 0.024 255);
-  --popover-foreground: oklch(0.94 0.018 230);
-  --primary: oklch(0.81 0.103 206);
-  --primary-foreground: oklch(0.16 0.02 255);
-  --secondary: oklch(0.24 0.022 255);
-  --secondary-foreground: oklch(0.92 0.015 230);
-  --muted: oklch(0.22 0.019 255);
-  --muted-foreground: oklch(0.73 0.018 235);
-  --accent: oklch(0.27 0.03 245);
-  --accent-foreground: oklch(0.94 0.018 230);
-  --destructive: oklch(0.67 0.18 25);
+  --background: oklch(0.98 0.001 0);
+  --foreground: oklch(0.25 0.01 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.01 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.01 0);
+  --primary: oklch(0.35 0.15 260);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.92 0.01 0);
+  --secondary-foreground: oklch(0.3 0.01 0);
+  --muted: oklch(0.88 0.005 0);
+  --muted-foreground: oklch(0.55 0.01 0);
+  --accent: oklch(0.4 0.12 260);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.65 0.2 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.8 0.11 206 / 0.45);
-  --chart-1: oklch(0.81 0.103 206);
-  --chart-2: oklch(0.74 0.082 230);
-  --chart-3: oklch(0.68 0.14 45);
-  --chart-4: oklch(0.76 0.07 168);
-  --chart-5: oklch(0.7 0.07 285);
-  --sidebar: oklch(0.17 0.022 255);
-  --sidebar-foreground: oklch(0.94 0.018 230);
-  --sidebar-primary: oklch(0.81 0.103 206);
-  --sidebar-primary-foreground: oklch(0.16 0.02 255);
-  --sidebar-accent: oklch(0.24 0.022 255);
-  --sidebar-accent-foreground: oklch(0.94 0.018 230);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.8 0.11 206 / 0.45);
+  --border: oklch(0.9 0.005 0);
+  --input: oklch(0.95 0.002 0);
+  --ring: oklch(0.35 0.15 260 / 0.4);
+  --chart-1: oklch(0.35 0.15 260);
+  --chart-2: oklch(0.5 0.12 200);
+  --chart-3: oklch(0.45 0.14 280);
+  --chart-4: oklch(0.4 0.13 240);
+  --chart-5: oklch(0.55 0.11 320);
+  --sidebar: oklch(0.98 0.001 0);
+  --sidebar-foreground: oklch(0.25 0.01 0);
+  --sidebar-primary: oklch(0.35 0.15 260);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.92 0.01 0);
+  --sidebar-accent-foreground: oklch(0.3 0.01 0);
+  --sidebar-border: oklch(0.9 0.005 0);
+  --sidebar-ring: oklch(0.35 0.15 260 / 0.4);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    min-height: 100vh;
-    background-image:
-      radial-gradient(circle at 15% 20%, rgba(84, 218, 255, 0.08), transparent 24%),
-      radial-gradient(circle at 85% 10%, rgba(255, 176, 74, 0.08), transparent 18%),
-      linear-gradient(180deg, rgba(11, 18, 33, 0.94), rgba(7, 12, 24, 1));
+    @apply bg-background text-foreground;
   }
-
-  ::selection {
-    background: rgba(103, 232, 249, 0.28);
-    color: white;
-  }
-
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -170,57 +154,6 @@ Use luminous cyan accents, deep space neutrals, layered glass surfaces, and seri
     min-width: 0;
   }
 
-  .glass-panel {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 2rem;
-    backdrop-filter: blur(24px);
-    box-shadow:
-      0 30px 80px rgba(0, 0, 0, 0.36),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  }
-
-  .glass-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.05));
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 1.5rem;
-    backdrop-filter: blur(18px);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
-  }
-
-  .hero-shell {
-    background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
-      rgba(7, 12, 24, 0.8);
-    box-shadow:
-      0 45px 120px rgba(0, 0, 0, 0.42),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  }
-
-  .eyebrow {
-    color: rgba(165, 243, 252, 0.88);
-    font-size: 0.72rem;
-    letter-spacing: 0.24em;
-    line-height: 1.2;
-    text-transform: uppercase;
-  }
-
-  .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 3vw, 3.5rem);
-    line-height: 0.98;
-    letter-spacing: -0.02em;
-  }
-
-  .scientific-noise {
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
-      radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0.6px, transparent 0.8px);
-    background-size: 32px 32px, 32px 32px, 18px 18px;
-    mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
-  }
-
   @media (min-width: 640px) {
     .container {
       padding-left: 1.5rem;
@@ -234,5 +167,13 @@ Use luminous cyan accents, deep space neutrals, layered glass surfaces, and seri
       padding-right: 2rem;
       max-width: 1280px;
     }
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-widest text-muted-foreground;
+  }
+
+  .font-display {
+    @apply font-serif text-slate-900;
   }
 }
