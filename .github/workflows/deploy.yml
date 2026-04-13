@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -15,7 +20,7 @@ jobs:
           version: 10
       - uses: actions/setup-node@v3
         with:
-          node-version: '22'  # Changed from 18 to 22
+          node-version: '22'
           cache: 'pnpm'
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm build
