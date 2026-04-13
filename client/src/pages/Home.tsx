@@ -159,7 +159,7 @@ export default function Home() {
               <div>
                 <p className="eyebrow mb-2">Jinsu Hong</p>
                 <h1 className="font-display text-3xl font-bold leading-tight text-slate-900">
-                  Data Science Researcher
+                  AI Scientist
                 </h1>
               </div>
 
