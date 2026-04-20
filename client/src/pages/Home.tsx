@@ -166,7 +166,7 @@ export default function Home() {
               {/* Portrait */}
               <div className="overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
                 <img
-                  src="https://jinsuhongg.github.io/images/Savanah_Jinsu.png"
+                  src="/images/symslake_JS_20260419_fixed.png"
                   alt="Portrait of Jinsu Hong"
                   className="h-56 w-full object-cover object-center"
                 />
