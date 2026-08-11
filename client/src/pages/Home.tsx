@@ -1,383 +1,168 @@
-/*
-Design philosophy for this file: Clean, minimal white aesthetic.
-Simple, readable, professional. Focus on content clarity with soft spacing and subtle accents.
-*/
 import { Button } from "@/components/ui/button";
 import {
+  ArrowDownRight,
   ArrowUpRight,
-  Atom,
-  BookOpen,
   BrainCircuit,
+  Code2,
   Download,
-  GraduationCap,
+  ExternalLink,
+  Github,
+  Linkedin,
   Mail,
   MapPin,
-  Microscope,
   Orbit,
+  ScanSearch,
   Sparkles,
 } from "lucide-react";
 
 const profileLinks = [
-  {
-    label: "Email",
-    href: "mailto:jinsuhong.knight@gmail.com",
-  },
-  {
-    label: "Google Scholar",
-    href: "https://scholar.google.com/citations?user=_sb6QZMAAAAJ&hl=en",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/JinsuHongg",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/jinsuhong",
-  },
-  {
-    label: "ORCID",
-    href: "https://orcid.org/0009-0002-4383-1376",
-  },
+  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=_sb6QZMAAAAJ&hl=en" },
+  { label: "ORCID", href: "https://orcid.org/0009-0002-4383-1376" },
+  { label: "GitHub", href: "https://github.com/JinsuHongg" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/jinsuhong" },
 ];
 
-const researchInterests = [
+const researchAreas = [
   {
-    title: "Solar flare forecasting",
-    description:
-      "Building machine learning systems for reliable solar event forecasting across active-region and full-disk settings.",
-    icon: Orbit,
-  },
-  {
+    number: "01",
     title: "Uncertainty quantification",
     description:
-      "Designing trustworthy predictive pipelines with conformal methods and interval-aware evaluation for high-stakes scientific use.",
+      "Building calibrated predictive systems that communicate what models know, what they do not know, and when their outputs should be trusted.",
+    methods: "Conformal prediction · quantile regression · calibration",
     icon: Sparkles,
   },
   {
-    title: "Computer vision for heliophysics",
+    number: "02",
+    title: "Foundation models",
     description:
-      "Using imagery, segmentation, and representation learning to extract structure from solar observations and magnetic field data.",
-    icon: Microscope,
-  },
-  {
-    title: "Foundation models for space weather",
-    description:
-      "Exploring scalable learned representations and transfer across multimodal scientific datasets for forecasting and interpretation.",
+      "Studying transferable representations and efficient adaptation for scientific, multimodal, and data-limited machine learning problems.",
+    methods: "Representation learning · transfer learning · multimodal ML",
     icon: BrainCircuit,
   },
-];
-
-const selectedWorks = [
   {
-    year: "2025",
-    venue: "IEEE ICDMW",
-    title: "Uncertainty-Aware Solar Flare Regression",
-    summary:
-      "Develops a reliability-aware forecasting perspective for solar flare prediction, emphasizing calibrated predictive uncertainty.",
-  },
-  {
-    year: "2023",
-    venue: "ICMLA",
-    title: "An Innovative Solar Flare Metadata Collection for Space Weather Analytics",
-    summary:
-      "Introduces improved metadata design for machine learning workflows in space weather analytics and solar flare modeling.",
-  },
-  {
-    year: "2023",
-    venue: "CogMI",
-    title: "Enhancing Solar Flare Prediction with Innovative Data-Driven Labels",
-    summary:
-      "Reconsiders label construction for flare prediction to improve fidelity beyond conventional operational definitions.",
-  },
-  {
-    year: "2023",
-    venue: "DaWaK",
-    title: "Beyond Traditional Flare Forecasting: A Data-driven Labeling Approach for High-fidelity Predictions",
-    summary:
-      "Frames data-driven labeling as a core methodological lever for more useful and realistic flare forecasting performance.",
-  },
-];
-
-const projectHighlights = [
-  {
-    title: "Data-driven labeling for solar flare prediction",
+    number: "03",
+    title: "Imbalanced learning",
     description:
-      "This research revisits the assumptions behind GOES-based flare labels and introduces alternative labeling regimes that better reflect relative flux changes and cumulative behavior over prediction windows. The resulting framework reduces false positives and supports more faithful modeling under difficult solar-cycle conditions.",
-    technologies: "Python, NumPy, Pandas, scikit-learn, GOES satellite data",
+      "Developing data-centric approaches for rare-event prediction, including better targets, loss functions, and evaluation under skewed distributions.",
+    methods: "Rare events · ordinal learning · data-centric AI",
+    icon: Orbit,
   },
   {
-    title: "Conformal prediction for trustworthy space weather forecasting",
+    number: "04",
+    title: "Computer vision",
     description:
-      "By applying conformal prediction to solar flare forecasting, this line of work focuses on making model outputs more actionable. Instead of only asking whether an event will occur, it asks how much trust one should place in the prediction, enabling better decision support in the presence of skewed and uncertain data.",
-    technologies: "PyTorch, deep learning, conformal prediction, quantile regression",
+      "Using visual representation learning and segmentation to extract reliable signals from complex scientific imagery and spatiotemporal data.",
+    methods: "Segmentation · deep learning · scientific imaging",
+    icon: ScanSearch,
   },
 ];
 
-const education = [
-  {
-    degree: "Ph.D. in Computer Science",
-    school: "Georgia State University",
-    period: "Aug. 2023 – Present",
-  },
-  {
-    degree: "M.S. in Data Science and Analytics",
-    school: "Georgia State University",
-    period: "Aug. 2021 – May 2023",
-  },
-  {
-    degree: "B.E. in Advanced Material Science and Engineering",
-    school: "SungKyunKwan University",
-    period: "Mar. 2010 – Jan. 2017",
-  },
+// Add a URL to `links` as papers, code, and datasets become available.
+const selectedPublications = [
+  { year: "2026", title: "Uncertainty-Aware Solar Flare Regression", venue: "Preprint", area: "Uncertainty quantification" },
+  { year: "2023", title: "An Innovative Solar Flare Metadata Collection for Space Weather Analytics", venue: "IEEE ICMLA", area: "Imbalanced learning" },
+  { year: "2023", title: "Beyond Traditional Flare Forecasting: A Data-driven Labeling Approach for High-fidelity Predictions", venue: "DaWaK", area: "Data-centric AI" },
 ];
 
-const updates = [
+const projects = [
   {
-    date: "Nov 2025",
-    text: 'Paper "Uncertainty-Aware Solar Flare Regression" accepted at ICDMW 2025.',
+    title: "Trustworthy rare-event forecasting",
+    description:
+      "Methods for producing useful prediction intervals and evaluating reliability when high-impact events are scarce.",
+    tags: ["Conformal prediction", "Calibration", "Regression"],
   },
   {
-    date: "Dec 2024",
-    text: "Presented a poster at AGU Fall Meeting 2024 on conformal prediction for solar flares.",
+    title: "Data-centric learning for scientific ML",
+    description:
+      "Investigating how target definitions, label structure, and imbalance-aware objectives change model behavior and scientific utility.",
+    tags: ["Label design", "Ordinal learning", "Evaluation"],
   },
   {
-    date: "2025",
-    text: "Presented work on active region and polarity inversion line segmentation with heliophysics foundation models.",
+    title: "Foundation models for heliophysics",
+    description:
+      "Evaluating and adapting learned representations for solar imagery, segmentation, and space-weather forecasting tasks.",
+    tags: ["Foundation models", "Vision", "Scientific AI"],
   },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        {/* Header / Intro Section */}
-        <div className="mb-16 grid gap-12 lg:grid-cols-[280px_1fr]">
-          {/* Sidebar */}
-          <aside className="lg:sticky lg:top-8 lg:self-start">
-            <div className="space-y-6">
-              {/* Name and Title */}
-              <div>
-                <p className="eyebrow mb-2">Jinsu Hong</p>
-                <h1 className="font-display text-3xl font-bold leading-tight text-slate-900">
-                  AI Scientist
-                </h1>
-              </div>
+    <div className="min-h-screen bg-[#f7f7f4] text-slate-900">
+      <header className="border-b border-slate-900/10 bg-[#f7f7f4]/95 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+          <a href="#top" className="font-display text-lg font-bold tracking-tight">Jinsu Hong</a>
+          <nav aria-label="Primary navigation" className="hidden items-center gap-6 text-sm text-slate-600 md:flex">
+            <a className="transition hover:text-slate-950" href="#research">Research</a>
+            <a className="transition hover:text-slate-950" href="#publications">Publications</a>
+            <a className="transition hover:text-slate-950" href="#projects">Projects</a>
+            <a className="transition hover:text-slate-950" href="#contact">Contact</a>
+          </nav>
+          <a href="mailto:jinsuhong.knight@gmail.com" className="text-sm font-semibold text-cyan-800 transition hover:text-cyan-950">
+            Email <ArrowUpRight className="inline h-3.5 w-3.5" />
+          </a>
+        </div>
+      </header>
 
-              {/* Portrait */}
-              <div className="overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
-                <img
-                  src="/images/symslake_JS_20260419_fixed.png"
-                  alt="Portrait of Jinsu Hong"
-                  className="h-56 w-full object-cover object-center"
-                />
-              </div>
+      <main id="top">
+        <section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_280px] lg:py-24">
+          <div>
+            <p className="eyebrow mb-5 text-cyan-800">Computer science · machine learning · scientific AI</p>
+            <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+              Reliable machine learning for complex scientific data.
+            </h1>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
+              I am a Ph.D. candidate in Computer Science at Georgia State University. I develop machine learning methods for uncertainty-aware prediction, foundation models, imbalanced learning, and computer vision.
+            </p>
+            <p className="mt-4 max-w-2xl leading-7 text-slate-600">
+              My current work uses heliophysics and space weather as demanding real-world settings for creating reliable, transferable, and data-centric AI systems.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <a href="#publications"><Button className="bg-slate-900 px-5 text-white hover:bg-slate-700">View publications <ArrowDownRight className="ml-2 h-4 w-4" /></Button></a>
+              <a href="https://jinsuhongg.github.io/CV_2025_new_JinsuHong-r1%20(2).docx" target="_blank" rel="noreferrer">
+                <Button variant="outline" className="border-slate-300 bg-transparent px-5 hover:bg-white"><Download className="mr-2 h-4 w-4" />Download CV</Button>
+              </a>
+            </div>
+          </div>
 
-              {/* Bio Info */}
-              <div className="space-y-3 text-sm text-slate-600">
-                <div className="flex items-start gap-3">
-                  <GraduationCap className="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" />
-                  <p>Ph.D. Student in Computer Science at Georgia State University</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Atom className="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" />
-                  <p>Researching machine learning, uncertainty quantification, and solar event forecasting</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" />
-                  <p>Atlanta, Georgia</p>
-                </div>
-              </div>
-
-              {/* Profile Links */}
-              <div className="space-y-2 border-t border-slate-200 pt-4">
-                {profileLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 transition hover:border-slate-400 hover:bg-white"
-                  >
-                    <span>{link.label}</span>
-                    <ArrowUpRight className="h-4 w-4 text-slate-400 transition group-hover:text-slate-600" />
-                  </a>
-                ))}
-              </div>
+          <aside className="border-l-2 border-cyan-700 pl-5 lg:pt-3">
+            <img src="/images/symslake_JS_20260419_fixed.png" alt="Portrait of Jinsu Hong" className="mb-6 aspect-square w-40 rounded-full object-cover object-center shadow-sm" />
+            <p className="font-semibold">Jinsu Hong</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">Ph.D. Candidate<br />Department of Computer Science<br />Georgia State University</p>
+            <div className="mt-5 flex items-center gap-2 text-sm text-slate-600"><MapPin className="h-4 w-4 text-cyan-800" />Atlanta, Georgia</div>
+            <div className="mt-6 space-y-2">
+              {profileLinks.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="flex items-center justify-between border-b border-slate-300 py-2 text-sm transition hover:border-cyan-800 hover:text-cyan-900"><span>{link.label}</span><ArrowUpRight className="h-3.5 w-3.5" /></a>)}
             </div>
           </aside>
+        </section>
 
-          {/* Main Content */}
-          <main className="space-y-12">
-            {/* Hero Section */}
-            <section className="rounded-lg border border-slate-200 overflow-hidden">
-              <div className="relative min-h-[500px] bg-gradient-to-br from-slate-900 to-slate-800 p-8 sm:p-10">
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663548443080/RvKZMg7N95RvnjQgkags5B/sdo-aia-coronal-loops_c214f1bf.jpg"
-                  alt="SDO AIA coronal loops - solar active region"
-                  className="absolute inset-0 h-full w-full object-cover opacity-40"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/70 to-transparent" />
-                <div className="relative z-10 space-y-6 max-w-2xl">
-                  <p className="eyebrow text-slate-300">Computational heliophysics · trustworthy AI · data-centric modeling</p>
-                  <h2 className="font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
-                    Building reliable forecasting systems for severe space weather events.
-                  </h2>
-                  <p className="text-base leading-relaxed text-slate-200 sm:text-lg">
-                    I am Jinsu Hong, a Computer Science Ph.D. student at Georgia State University advised by Dr. Berkay Aydin. My work bridges artificial intelligence and space weather, with a focus on solar flare prediction, uncertainty-aware modeling, computer vision, and scientific machine learning methods that support credible decision-making.
-                  </p>
+        <section className="border-y border-slate-900/10 bg-slate-900 px-5 py-12 text-slate-100 sm:px-8">
+          <div className="mx-auto max-w-6xl lg:grid lg:grid-cols-[280px_1fr] lg:gap-12">
+            <p className="eyebrow mb-5 text-cyan-300">Research vision</p>
+            <p className="max-w-3xl font-display !text-slate-100 text-2xl leading-relaxed sm:text-3xl">I study how machine learning systems can remain accurate, calibrated, and useful when observations are uncertain, events are rare, and data are rich but difficult to interpret.</p>
+          </div>
+        </section>
 
-                  <div className="flex flex-wrap gap-3 pt-4">
-                    <a href="#research-focus">
-                      <Button className="rounded-lg bg-cyan-500 px-6 text-white hover:bg-cyan-600">
-                        Explore research
-                      </Button>
-                    </a>
-                    <a
-                      href="https://jinsuhongg.github.io/CV_2025_new_JinsuHong-r1%20(2).docx"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Button
-                        variant="outline"
-                        className="rounded-lg border-slate-400 bg-slate-700/50 px-6 text-white hover:bg-slate-600"
-                      >
-                        <Download className="mr-2 h-4 w-4" />
-                        Download CV
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
+        <section id="research" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+          <div className="mb-10 max-w-2xl"><p className="eyebrow mb-3 text-cyan-800">Research</p><h2 className="font-display text-4xl font-bold">Methods first. Applications with impact.</h2><p className="mt-4 leading-7 text-slate-600">My work is motivated by challenges in scientific data, but aims to produce machine learning methods with broader relevance.</p></div>
+          <div className="grid border-t border-slate-300 sm:grid-cols-2">
+            {researchAreas.map((area) => { const Icon = area.icon; return <article key={area.title} className="group border-b border-slate-300 p-6 sm:[&:nth-child(odd)]:border-r"><div className="flex items-start justify-between"><span className="font-mono text-xs text-cyan-800">{area.number}</span><Icon className="h-5 w-5 text-slate-500 transition group-hover:text-cyan-800" /></div><h3 className="mt-9 text-xl font-semibold">{area.title}</h3><p className="mt-3 leading-7 text-slate-600">{area.description}</p><p className="mt-5 text-xs font-semibold uppercase tracking-wide text-slate-500">{area.methods}</p></article>; })}
+          </div>
+        </section>
 
-            {/* Research Focus Section */}
-            <section id="research-focus" className="space-y-8">
-              <div>
-                <p className="eyebrow mb-2">Research Focus</p>
-                <h3 className="font-display text-2xl font-bold text-slate-900">
-                  Research Interests
-                </h3>
-              </div>
+        <section id="publications" className="bg-white px-5 py-20 sm:px-8">
+          <div className="mx-auto max-w-6xl"><div className="flex flex-wrap items-end justify-between gap-5"><div><p className="eyebrow mb-3 text-cyan-800">Publications</p><h2 className="font-display text-4xl font-bold">Selected work</h2></div><a href="https://scholar.google.com/citations?user=_sb6QZMAAAAJ&hl=en" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-800 hover:text-cyan-950">View complete Google Scholar profile <ExternalLink className="h-4 w-4" /></a></div>
+            <div className="mt-10 divide-y divide-slate-200 border-y border-slate-200">
+              {selectedPublications.map((publication) => <article key={publication.title} className="grid gap-3 py-6 md:grid-cols-[90px_1fr_auto]"><p className="font-mono text-sm text-cyan-800">{publication.year}</p><div><h3 className="text-lg font-semibold leading-7">{publication.title}</h3><p className="mt-1 text-sm text-slate-600">{publication.venue} · {publication.area}</p></div><span className="self-start rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600">Details coming soon</span></article>)}
+            </div>
+            <p className="mt-5 text-sm text-slate-500">Paper links, authors, abstracts, code, and datasets will be added here as they are prepared.</p>
+          </div>
+        </section>
 
-              <div className="grid gap-6 sm:grid-cols-2">
-                {researchInterests.map((interest) => {
-                  const IconComponent = interest.icon;
-                  return (
-                    <div key={interest.title} className="rounded-lg border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-sm transition">
-                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100">
-                        <IconComponent className="h-5 w-5 text-slate-900" />
-                      </div>
-                      <h4 className="mb-2 font-semibold text-slate-900">{interest.title}</h4>
-                      <p className="text-sm text-slate-600 leading-relaxed">{interest.description}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </section>
+        <section id="projects" className="mx-auto max-w-6xl px-5 py-20 sm:px-8"><div className="mb-10"><p className="eyebrow mb-3 text-cyan-800">Research projects</p><h2 className="font-display text-4xl font-bold">From methods to evidence</h2></div><div className="grid gap-5 lg:grid-cols-3">{projects.map((project) => <article key={project.title} className="border border-slate-300 bg-white p-6 shadow-[4px_4px_0_0_rgb(8_145_178_/_0.16)]"><Code2 className="h-5 w-5 text-cyan-800" /><h3 className="mt-10 text-xl font-semibold">{project.title}</h3><p className="mt-3 leading-7 text-slate-600">{project.description}</p><div className="mt-6 flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="rounded-full border border-slate-200 px-2.5 py-1 text-xs text-slate-600">{tag}</span>)}</div></article>)}</div></section>
 
-            {/* Selected Works Section */}
-            <section className="space-y-8">
-              <div>
-                <p className="eyebrow mb-2">Publications</p>
-                <h3 className="font-display text-2xl font-bold text-slate-900">
-                  Selected Works
-                </h3>
-              </div>
-
-              <div className="space-y-4">
-                {selectedWorks.map((work, idx) => (
-                  <div key={idx} className="rounded-lg border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-sm transition">
-                    <div className="mb-3 flex items-start justify-between">
-                      <div>
-                        <p className="text-sm font-semibold text-slate-500">{work.year} · {work.venue}</p>
-                      </div>
-                    </div>
-                    <h4 className="mb-2 font-semibold text-slate-900">{work.title}</h4>
-                    <p className="text-sm text-slate-600 leading-relaxed">{work.summary}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Projects Section */}
-            <section className="space-y-8">
-              <div>
-                <p className="eyebrow mb-2">Projects</p>
-                <h3 className="font-display text-2xl font-bold text-slate-900">
-                  Research Projects
-                </h3>
-              </div>
-
-              <div className="space-y-6">
-                {projectHighlights.map((project, idx) => (
-                  <div key={idx} className="rounded-lg border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-sm transition">
-                    <h4 className="mb-3 font-semibold text-slate-900">{project.title}</h4>
-                    <p className="mb-4 text-sm text-slate-600 leading-relaxed">{project.description}</p>
-                    <p className="text-xs text-slate-500">
-                      <span className="font-semibold">Technologies:</span> {project.technologies}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Updates Section */}
-            <section className="space-y-8">
-              <div>
-                <p className="eyebrow mb-2">News</p>
-                <h3 className="font-display text-2xl font-bold text-slate-900">
-                  Recent Updates
-                </h3>
-              </div>
-
-              <div className="space-y-4">
-                {updates.map((update, idx) => (
-                  <div key={idx} className="rounded-lg border border-slate-200 bg-white p-4 hover:border-slate-300 hover:shadow-sm transition">
-                    <p className="text-xs font-semibold text-slate-500 mb-1">{update.date}</p>
-                    <p className="text-sm text-slate-700">{update.text}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Education Section */}
-            <section className="space-y-8">
-              <div>
-                <p className="eyebrow mb-2">Background</p>
-                <h3 className="font-display text-2xl font-bold text-slate-900">
-                  Education
-                </h3>
-              </div>
-
-              <div className="space-y-4">
-                {education.map((edu, idx) => (
-                  <div key={idx} className="rounded-lg border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-sm transition">
-                    <h4 className="font-semibold text-slate-900">{edu.degree}</h4>
-                    <p className="text-sm text-slate-600">{edu.school}</p>
-                    <p className="text-xs text-slate-500 mt-1">{edu.period}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Footer / Contact */}
-            <section className="border-t border-slate-200 pt-12">
-              <div className="rounded-lg bg-slate-50 p-8 text-center">
-                <h3 className="font-display text-xl font-bold text-slate-900 mb-3">Get in touch</h3>
-                <p className="text-slate-600 mb-6">
-                  Feel free to reach out for collaborations or just a friendly hello.
-                </p>
-                <a href="mailto:jinsuhong.knight@gmail.com">
-                  <Button className="rounded-lg bg-slate-900 px-6 text-white hover:bg-slate-800">
-                    <Mail className="mr-2 h-4 w-4" />
-                    Send me an email
-                  </Button>
-                </a>
-              </div>
-            </section>
-          </main>
-        </div>
-      </div>
+        <section id="contact" className="border-t border-slate-900/10 bg-[#e8f4f4] px-5 py-16 sm:px-8"><div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_auto] md:items-end"><div><p className="eyebrow mb-3 text-cyan-800">Contact</p><h2 className="max-w-2xl font-display text-4xl font-bold">Interested in trustworthy and scientific machine learning?</h2><p className="mt-4 max-w-xl leading-7 text-slate-600">I welcome conversations about research collaborations, academic opportunities, and machine learning for complex scientific problems.</p></div><a href="mailto:jinsuhong.knight@gmail.com"><Button className="bg-slate-900 px-5 text-white hover:bg-slate-700"><Mail className="mr-2 h-4 w-4" />Get in touch</Button></a></div></section>
+      </main>
+      <footer className="bg-slate-900 px-5 py-6 text-sm text-slate-400 sm:px-8"><div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3"><span>© {new Date().getFullYear()} Jinsu Hong</span><span className="flex items-center gap-4"><a className="hover:text-white" href="https://github.com/JinsuHongg" target="_blank" rel="noreferrer"><Github className="h-4 w-4" /></a><a className="hover:text-white" href="https://linkedin.com/in/jinsuhong" target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4" /></a><a className="hover:text-white" href="mailto:jinsuhong.knight@gmail.com"><Mail className="h-4 w-4" /></a></span></div></footer>
     </div>
   );
 }
