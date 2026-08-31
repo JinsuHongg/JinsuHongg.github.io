@@ -118,7 +118,7 @@ export default function Home() {
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a href="#publications"><Button className="bg-slate-900 px-5 text-white hover:bg-slate-700">View publications <ArrowDownRight className="ml-2 h-4 w-4" /></Button></a>
-              <a href="/cv">
+              <a href="/cv/">
                 <Button variant="outline" className="border-slate-300 bg-transparent px-5 hover:bg-white"><Download className="mr-2 h-4 w-4" />Download CV</Button>
               </a>
             </div>
