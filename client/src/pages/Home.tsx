@@ -118,7 +118,7 @@ export default function Home() {
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a href="#publications"><Button className="bg-slate-900 px-5 text-white hover:bg-slate-700">View publications <ArrowDownRight className="ml-2 h-4 w-4" /></Button></a>
-              <a href="https://jinsuhongg.github.io/CV_2025_new_JinsuHong-r1%20(2).docx" target="_blank" rel="noreferrer">
+              <a href="https://docs.google.com/document/d/10wwfyt6xXfqchFDT2vKoVh60gNVXzsmA/edit?usp=sharing&ouid=117414335558668737707&rtpof=true&sd=true" target="_blank" rel="noreferrer">
                 <Button variant="outline" className="border-slate-300 bg-transparent px-5 hover:bg-white"><Download className="mr-2 h-4 w-4" />Download CV</Button>
               </a>
             </div>
