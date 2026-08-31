@@ -142,8 +142,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="research" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-          <div className="mb-10 max-w-2xl"><p className="eyebrow mb-3 text-cyan-800">Research</p><h2 className="font-display text-4xl font-bold">Methods first. Applications with impact.</h2><p className="mt-4 leading-7 text-slate-600">My work is motivated by challenges in scientific data, but aims to produce machine learning methods with broader relevance.</p></div>
+        <section id="research" className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+          <div className="mb-10 max-w-3xl"><p className="eyebrow mb-3 text-cyan-800">Research</p><h2 className="font-display text-4xl font-bold">Methods first. Applications with impact.</h2><p className="mt-4 leading-7 text-slate-600">My work is motivated by challenges in scientific data, but aims to produce machine learning methods with broader relevance.</p></div>
           <div className="grid border-t border-slate-300 sm:grid-cols-2">
             {researchAreas.map((area) => { const Icon = area.icon; return <article key={area.title} className="group border-b border-slate-300 p-6 sm:[&:nth-child(odd)]:border-r"><div className="flex items-start justify-between"><span className="font-mono text-xs text-cyan-800">{area.number}</span><Icon className="h-5 w-5 text-slate-500 transition group-hover:text-cyan-800" /></div><h3 className="mt-9 text-xl font-semibold">{area.title}</h3><p className="mt-3 leading-7 text-slate-600">{area.description}</p><p className="mt-5 text-xs font-semibold uppercase tracking-wide text-slate-500">{area.methods}</p></article>; })}
           </div>
