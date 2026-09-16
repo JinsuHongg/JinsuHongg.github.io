@@ -125,7 +125,14 @@ Focus on readability and simplicity over visual drama.
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-sans text-foreground;
+  }
+  a:focus-visible {
+    outline: 2px solid #0e7490;
+    outline-offset: 4px;
+  }
+  section[id] {
+    scroll-margin-top: 1.5rem;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -174,6 +181,7 @@ Focus on readability and simplicity over visual drama.
   }
 
   .font-display {
-    @apply font-serif text-slate-900;
+    font-family: var(--font-display);
+    @apply text-slate-900;
   }
 }
