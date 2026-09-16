@@ -126,13 +126,13 @@ export default function Home() {
       <main id="main-content" tabIndex={-1}>
         <section id="top" className="mx-auto grid max-w-6xl gap-8 px-5 py-10 sm:px-8 md:grid-cols-[1fr_240px] md:py-14">
           <div>
-            <p className="eyebrow mb-5 text-cyan-800">Computer science · machine learning · scientific AI</p>
+            <p className="eyebrow mb-5 text-cyan-800">Trustworthy ML · uncertainty quantification · scientific AI</p>
             <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
               Jinsu Hong
             </h1>
-            <p className="mt-4 text-xl leading-8 text-slate-700">Reliable machine learning for complex scientific data.</p>
+            <p className="mt-4 text-xl leading-8 text-slate-700">Trustworthy machine learning for complex scientific data.</p>
             <p className="mt-5 max-w-2xl leading-7 text-slate-600">
-              I am a Ph.D. candidate in Computer Science at Georgia State University. I develop machine learning methods for uncertainty-aware prediction, foundation models, imbalanced learning, and computer vision.
+              I am a Ph.D. candidate in Computer Science at Georgia State University. My research centers on uncertainty quantification for reliable machine learning, with work in foundation models, imbalanced learning, and computer vision.
             </p>
             <p className="mt-4 max-w-2xl leading-7 text-slate-600">
               My current work uses heliophysics and space weather as demanding real-world settings for creating reliable, transferable, and data-centric AI systems.
@@ -171,7 +171,7 @@ export default function Home() {
         </section>
 
         <section id="research" className="mx-auto max-w-7xl px-5 py-12 sm:py-16 sm:px-8">
-          <div className="mb-10 max-w-4xl"><p className="eyebrow mb-3 text-cyan-800">Research</p><h2 className="font-display text-4xl font-bold">Methods first. Applications with impact.</h2><p className="mt-4 leading-7 text-slate-600">My work is motivated by challenges in scientific data, but aims to produce machine learning methods with broader relevance.</p></div>
+          <div className="mb-10 max-w-4xl"><p className="eyebrow mb-3 text-cyan-800">Research</p><h2 className="font-display text-4xl font-bold">Trustworthy ML for scientific data.</h2><p className="mt-4 leading-7 text-slate-600">I study uncertainty quantification to make machine learning predictions more interpretable and useful. Heliophysics and space weather provide demanding settings for this work, alongside foundation models, imbalanced learning, and computer vision.</p></div>
           <div className="grid border-t border-slate-300 sm:grid-cols-2">
             {researchAreas.map((area) => { const Icon = area.icon; return <article key={area.title} className="group border-b border-slate-300 p-6 sm:[&:nth-child(odd)]:border-r"><div className="flex items-start justify-between"><span className="font-mono text-xs text-cyan-800">{area.number}</span><Icon className="h-5 w-5 text-slate-500 transition group-hover:text-cyan-800" /></div><h3 className="mt-9 text-xl font-semibold">{area.title}</h3><p className="mt-3 leading-7 text-slate-600">{area.description}</p><p className="mt-5 text-xs font-semibold uppercase tracking-wide text-slate-500">{area.methods}</p></article>; })}
           </div>
