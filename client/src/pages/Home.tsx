@@ -201,6 +201,23 @@ export default function Home() {
                 </article>
               ))}
             </div>
+            <div className="mt-14 border-t border-slate-300 pt-10">
+              <p className="eyebrow mb-3 text-cyan-800">Interactive tools</p>
+              <article className="flex flex-col gap-6 border border-slate-300 bg-[#f7f7f4] p-6 shadow-[4px_4px_0_0_rgb(8_145_178_/_0.16)] sm:flex-row sm:items-center sm:justify-between sm:p-8">
+                <div className="max-w-3xl">
+                  <h3 className="text-xl font-semibold leading-7">Solar Arcade — Mission Control</h3>
+                  <p className="mt-3 leading-7 text-slate-600">
+                    An interactive, Sun-centered explorer for viewing the positions of Earth, SDO, STEREO-A, and STEREO-B from 2010 to 2026, with date and time controls, playback, and a rotatable 3D view.
+                  </p>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                    NASA positions · SDO spacing enlarged · Object sizes not to scale
+                  </p>
+                </div>
+                <a href="https://solar-arcade.pages.dev/" target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-cyan-800 hover:text-cyan-950">
+                  Open Solar Arcade <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </article>
+            </div>
           </div>
         </section>
 
