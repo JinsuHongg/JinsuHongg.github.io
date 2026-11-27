@@ -1,7 +1,7 @@
 /*
-Design philosophy for this file: Clean, minimal white aesthetic.
-Light, airy, and professional. Use soft grays, subtle accents, and clean typography.
-Focus on readability and simplicity over visual drama.
+Design philosophy: Clean editorial academic aesthetic.
+Warm off-white canvas (#f7f7f4), deep slate typography (#0f172a),
+and restrained cyan accents (#155e75) focused on readability.
 */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -34,90 +34,29 @@ Focus on readability and simplicity over visual drama.
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.98 0.001 0);
-  --foreground: oklch(0.25 0.01 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.01 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.01 0);
-  --primary: oklch(0.35 0.15 260);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.92 0.01 0);
-  --secondary-foreground: oklch(0.3 0.01 0);
-  --muted: oklch(0.88 0.005 0);
-  --muted-foreground: oklch(0.55 0.01 0);
-  --accent: oklch(0.4 0.12 260);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.9 0.005 0);
-  --input: oklch(0.95 0.002 0);
-  --ring: oklch(0.35 0.15 260 / 0.4);
-  --chart-1: oklch(0.35 0.15 260);
-  --chart-2: oklch(0.5 0.12 200);
-  --chart-3: oklch(0.45 0.14 280);
-  --chart-4: oklch(0.4 0.13 240);
-  --chart-5: oklch(0.55 0.11 320);
-  --sidebar: oklch(0.98 0.001 0);
-  --sidebar-foreground: oklch(0.25 0.01 0);
-  --sidebar-primary: oklch(0.35 0.15 260);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.92 0.01 0);
-  --sidebar-accent-foreground: oklch(0.3 0.01 0);
-  --sidebar-border: oklch(0.9 0.005 0);
-  --sidebar-ring: oklch(0.35 0.15 260 / 0.4);
-}
-
-.dark {
-  --background: oklch(0.98 0.001 0);
-  --foreground: oklch(0.25 0.01 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.01 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.01 0);
-  --primary: oklch(0.35 0.15 260);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.92 0.01 0);
-  --secondary-foreground: oklch(0.3 0.01 0);
-  --muted: oklch(0.88 0.005 0);
-  --muted-foreground: oklch(0.55 0.01 0);
-  --accent: oklch(0.4 0.12 260);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.9 0.005 0);
-  --input: oklch(0.95 0.002 0);
-  --ring: oklch(0.35 0.15 260 / 0.4);
-  --chart-1: oklch(0.35 0.15 260);
-  --chart-2: oklch(0.5 0.12 200);
-  --chart-3: oklch(0.45 0.14 280);
-  --chart-4: oklch(0.4 0.13 240);
-  --chart-5: oklch(0.55 0.11 320);
-  --sidebar: oklch(0.98 0.001 0);
-  --sidebar-foreground: oklch(0.25 0.01 0);
-  --sidebar-primary: oklch(0.35 0.15 260);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.92 0.01 0);
-  --sidebar-accent-foreground: oklch(0.3 0.01 0);
-  --sidebar-border: oklch(0.9 0.005 0);
-  --sidebar-ring: oklch(0.35 0.15 260 / 0.4);
+  --radius: 0.5rem;
+  --background: #f7f7f4;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #0f172a;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f4f4;
+  --secondary-foreground: #0f172a;
+  --muted: #e2e8f0;
+  --muted-foreground: #475569;
+  --accent: #155e75;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #cbd5e1;
+  --input: #cbd5e1;
+  --ring: rgb(21 94 117 / 0.4);
 }
 
 @layer base {
@@ -127,12 +66,13 @@ Focus on readability and simplicity over visual drama.
   body {
     @apply bg-background font-sans text-foreground;
   }
-  a:focus-visible {
+  a:focus-visible,
+  button:focus-visible {
     outline: 2px solid #0e7490;
-    outline-offset: 4px;
+    outline-offset: 3px;
   }
   section[id] {
-    scroll-margin-top: 1.5rem;
+    scroll-margin-top: 5rem;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -148,34 +88,6 @@ Focus on readability and simplicity over visual drama.
 }
 
 @layer components {
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1280px;
-    }
-  }
-
   .eyebrow {
     @apply text-xs font-semibold uppercase tracking-widest text-muted-foreground;
   }
